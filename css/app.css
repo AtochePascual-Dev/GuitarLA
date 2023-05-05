@@ -427,3 +427,42 @@ textarea {
 	text-align: center;
 	color: var(--blanco);
 }
+
+/* * NOSOTROS */
+
+.nosotros {
+	padding: 5rem 0;
+	max-width: 80rem;
+}
+
+.nosotros__titulo {
+	text-align: center;
+	color: var(--primary);
+}
+
+.nosotros__grid {
+	display: grid;
+	gap: 4rem;
+}
+
+@media (min-width:768px) {
+	.nosotros__grid {
+		grid-template-columns: repeat(2, 1fr);
+		/* align-items: center; */
+		gap: 2rem;
+	}
+}
+
+.nosotros__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.nosotros__meta {
+	line-height: 2;
+}
+
+.nosotros__meta:nth-child(2) {
+	margin-top: 2rem;
+}
