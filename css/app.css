@@ -5,23 +5,209 @@
 	--fuente-principal: 'Outfit', sans-serif;
 }
 
-html {
-	font-size: 62.5%;
+/* * GLOBALES */
+* {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-	box-sizing: inherit;
+html {
+	font-size: 62.5%;
 }
 
 body {
-	font-size: 2rem;
+	min-width: 32rem;
+	font-size: 1.6rem;
 	font-family: var(--fuente-principal);
-	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 0 0 5rem 0;
+	line-height: 1.2;
+	font-family: var(--fuente-headin);
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+@media (min-width:768px) {
+	h1 {
+		font-size: 4.2rem;
+	}
+}
+
+h2 {
+	font-size: 3.8rem;
+}
+
+@media (min-width:768px) {
+	h2 {
+		font-size: 4rem;
+	}
+}
+
+h3 {
+	font-size: 2.6rem;
 }
 
 img {
 	max-width: 100%;
+	display: block;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+input,
+select,
+textarea {
+	outline: none;
+}
+
+[class*="-container"] {
+	width: min(95%, 120rem);
+	margin: 0 auto;
+}
+
+/* * HEADER */
+
+.header {
+	position: relative;
+	overflow: hidden;
+	padding: 3rem 0;
+	background-image: linear-gradient(to right, rgb(0 0 0 / .7) 0%, rgb(0 0 0 / .7) 100%), url('../img/header.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.header__barra {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5rem;
+}
+
+@media (min-width:768px) {
+	.header__barra {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.header__logo {
+	width: 25rem;
+}
+
+.navegacion {
+	position: relative;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+@media (min-width:768px) {
+	.navegacion {
+		flex-direction: row;
+	}
+}
+
+.navegacion__enlace {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--blanco);
+}
+
+.navegacion__enlace:hover {
+	color: var(--primary);
+}
+
+.header__descripcion {
+	max-width: 40rem;
+	margin: 5rem auto 0;
+	text-align: center;
+	color: var(--blanco);
+}
+
+@media (min-width:768px) {
+	.header__descripcion {
+		margin: 15rem 0 0;
+		text-align: start;
+	}
+}
+
+.header__titulo {
+	margin-bottom: 2rem;
+	font-size: 5rem;
+}
+
+.header__texto {
+	line-height: 2;
+}
+
+.header__precio {
+	font-size: 4rem;
+	font-weight: 900;
+	color: var(--primary);
+}
+
+.header__boton {
+	margin: 3rem auto 0;
+	padding: 1rem 5rem;
+	display: inline-block;
+	font-weight: 700;
+	font-size: 1.4rem;
+	text-align: center;
+	text-transform: uppercase;
+	border: 2px solid var(--primary);
+	color: var(--blanco);
+	transition: all .3s ease-in-out;
+}
+
+.header__boton:hover {
+	background-color: var(--primary);
+}
+
+.header__img-guitarra {
+	display: none;
+	width: 30rem;
+}
+
+@media (min-width:768px) {
+	.header__img-guitarra {
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		right: 0;
+		display: block;
+		animation-name: guitarra;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+}
+
+@keyframes guitarra {
+	0% {
+		right: -100px;
+		opacity: 0;
+	}
+
+	100% {
+		right: 0;
+		opacity: 1;
+	}
 }
