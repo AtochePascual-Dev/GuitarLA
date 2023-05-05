@@ -466,3 +466,14 @@ textarea {
 .nosotros__meta:nth-child(2) {
 	margin-top: 2rem;
 }
+
+/* * BLOG */
+
+.blog {
+	padding: 5rem 0;
+}
+
+.blog__titulo {
+	text-align: center;
+	color: var(--primary);
+}
