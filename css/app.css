@@ -283,3 +283,46 @@ textarea {
 	color: var(--blanco);
 	background-color: var(--primary)
 }
+
+/* * CURSOS */
+
+.cursos {
+	padding: 10rem 0;
+	background-image: url('../img/cursos_bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.cursos__content {
+	max-width: 50rem;
+	margin: 0 auto;
+	text-align: center;
+	color: var(--blanco);
+}
+
+.cursos__titulo {
+	margin-bottom: 3rem;
+}
+
+.cursos__texto {
+	line-height: 1.5;
+	font-size: 2rem;
+}
+
+.cursos__btn {
+	max-width: 30rem;
+	margin: 2rem auto 0;
+	padding: 1rem 4rem;
+	text-transform: uppercase;
+	font-weight: 900;
+	display: block;
+	border: 2px solid var(--primary);
+	color: var(--blanco);
+	transition: background-color .3s ease-in-out;
+}
+
+.cursos__btn:hover {
+	background-color: var(--primary);
+}
