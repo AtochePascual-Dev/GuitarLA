@@ -330,7 +330,7 @@ textarea {
 /* * NUESTRO-BLOG */
 
 .nuestro-blog {
-	padding-top: 5rem;
+	padding: 5rem 0;
 }
 
 .nuestro-blog__titulo {
@@ -401,4 +401,29 @@ textarea {
 .entrada__btn:hover {
 	color: var(--blanco);
 	background-color: var(--primary);
+}
+
+/* * FOOTER */
+
+.footer {
+	padding: 5rem 0 2rem;
+	background-color: var(--negro);
+}
+
+.footer__contet {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+@media (min-width:768px) {
+	.footer__contet {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.footer__copy {
+	text-align: center;
+	color: var(--blanco);
 }
